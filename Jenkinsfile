@@ -4,17 +4,17 @@ pipeline {
         stage('----clean----') { 
             steps {
 			    
-				bat "mvn clean -f firstjenkinsmvngithub"
+				bat "mvn clean"
             }
         }
         stage('----Test----') { 
             steps {
-                bat "mvn test -f firstjenkinsmvngithub"
+                bat "mvn test"
             }
         }
         stage('----Deploy----') { 
             steps {
-                bat "mvn package -f firstjenkinsmvngithub" 
+                bat "mvn package" 
             }
         }
     }
